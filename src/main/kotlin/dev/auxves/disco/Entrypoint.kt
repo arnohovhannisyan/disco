@@ -6,7 +6,6 @@ import net.minecraft.item.ItemGroups
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 
-@Suppress("unused")
 fun init() {
 	val addons = FabricLoader.getInstance().allMods
 		.filter { it.metadata.customValues.containsKey("disco") }
