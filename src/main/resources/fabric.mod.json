@@ -9,7 +9,7 @@
 		"homepage": "https://disco.auxves.dev",
 		"sources": "https://github.com/auxves/disco"
 	},
-	"license": "MIT",
+	"license": ["GPL-3.0"],
 	"icon": "assets/disco/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -17,7 +17,7 @@
 	},
 	"mixins": [],
 	"depends": {
-		"minecraft": "1.20.x",
+		"minecraft": ">=1.20",
 		"fabric-api": "*",
 		"fabric-language-kotlin": "*"
 	}

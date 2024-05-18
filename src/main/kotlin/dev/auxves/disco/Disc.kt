@@ -1,6 +1,6 @@
 package dev.auxves.disco
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.item.MusicDiscItem
 import net.minecraft.sound.SoundEvent
@@ -8,7 +8,7 @@ import net.minecraft.text.Text
 import net.minecraft.util.Identifier
 import net.minecraft.util.Rarity
 
-private val settings = FabricItemSettings()
+private val settings = Item.Settings()
 	.rarity(Rarity.RARE)
 	.maxCount(1)
 
