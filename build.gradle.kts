@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-java.sourceCompatibility = JavaVersion.VERSION_21
-java.targetCompatibility = JavaVersion.VERSION_21
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.targetCompatibility = JavaVersion.VERSION_1_8
 
 plugins {
 	id("fabric-loom")
@@ -31,7 +31,7 @@ tasks.named<Copy>("processResources") {
 }
 
 tasks.withType<KotlinCompile> {
-	kotlinOptions.jvmTarget = "21"
+	kotlinOptions.jvmTarget = "1.8"
 }
 
 tasks.withType<Jar> {

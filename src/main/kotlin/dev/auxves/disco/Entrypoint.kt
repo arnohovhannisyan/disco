@@ -1,10 +1,7 @@
 package dev.auxves.disco
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
 import net.fabricmc.loader.api.FabricLoader
-import net.minecraft.item.ItemGroups
-import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
+import net.minecraft.util.registry.Registry
 
 fun init() {
 	val addons = FabricLoader.getInstance().allMods
@@ -14,10 +11,6 @@ fun init() {
 	val discs = addons.flatMap { it.discs }
 
 	discs.forEach {
-		Registry.register(Registries.ITEM, it.id, it)
-	}
-
-	ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register { entries ->
-		discs.forEach(entries::add)
+		Registry.register(Registry.ITEM, it.id, it)
 	}
 }
